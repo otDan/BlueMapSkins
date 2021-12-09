@@ -23,8 +23,8 @@ public class Tools {
     }
 
     public String getUUID(String playerName) {
+        String url = "https://api.mojang.com/users/profiles/minecraft/" + playerName;
         try {
-            String url = "https://api.mojang.com/users/profiles/minecraft/" + playerName;
             String UUIDJson = IOUtils.toString(new URL(url), Charset.defaultCharset());
             JSONObject UUIDObject = (JSONObject) JSONValue.parseWithException(UUIDJson);
             return UUIDObject.get("id").toString();
