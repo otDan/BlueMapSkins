@@ -1,4 +1,0 @@
-#Currently available head types: 2d, 3d
-HeadType: 2d
-#Display the player second layer
-Overlay: true
